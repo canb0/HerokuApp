@@ -19,7 +19,7 @@ app.get('/', (req: Request, res: Response) => {
 
 // Route to get users as JSON
 app.get('/users', (req: Request, res: Response) => {
-  res.status(200).json({ users };
+  res.status(200).json({ users });
 });
 
 // Route to get user by ID
