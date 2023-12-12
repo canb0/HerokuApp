@@ -9,6 +9,7 @@ const users = [
   { id: '1', name: 'John Doe' },
   { id: '2', name: 'Canberk Akduygu' },
   { id: '3', name: 'Hannibal Lecter' },
+  { id: '4', name: 'Bruce Wayne' },
   // Add more users as needed
 ];
 
@@ -18,7 +19,7 @@ app.get('/', (req: Request, res: Response) => {
 
 // Route to get users as JSON
 app.get('/users', (req: Request, res: Response) => {
-  res.status(200).json({ users });
+  res.status(200).json({ users };
 });
 
 // Route to get user by ID
