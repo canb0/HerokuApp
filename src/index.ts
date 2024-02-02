@@ -1,7 +1,7 @@
 // index.ts
 import express, { Request, Response } from 'express';
 
-const app = express();
+let express = require('express');
 const PORT = process.env.PORT || 3000;
 
 // Sample user datac
