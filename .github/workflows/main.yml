@@ -24,6 +24,7 @@ jobs:
         
   sonarcloud:
     name: SonarCloud
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,7 +37,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           
   test:
-    needs: build
+    needs: SonarCloud
     runs-on: ubuntu-latest
 
     steps:
