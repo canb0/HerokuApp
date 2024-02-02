@@ -1,9 +1,9 @@
 // index.ts
 import express, { Request, Response } from 'express';
-
-let express = require('express');
 const PORT = process.env.PORT || 3000;
 
+// Route to get user by ID
+const app = express();
 // Sample user datac
 const users = [
   { id: '1', name: 'John Doe' },
@@ -22,7 +22,6 @@ app.get('/users', (req: Request, res: Response) => {
   res.status(200).json({ users });
 });
 
-// Route to get user by ID
 app.get('/users/:id', (req: Request, res: Response) => {
   const { id } = req.params;
 
